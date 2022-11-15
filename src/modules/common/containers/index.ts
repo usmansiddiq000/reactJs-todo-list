@@ -1,0 +1,1 @@
+export { default as errorBoundary } from './error-boundery';
