@@ -6,7 +6,7 @@ import { Todo } from './modules/todo-list';
 function App() {
   return (
     <div className="container-fluid">
-        <Todo />
+      <Todo />
     </div>
    
   );

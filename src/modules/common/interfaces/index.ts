@@ -1,0 +1,1 @@
+export type { IPaginationHook } from './pagination.hook.interface';
