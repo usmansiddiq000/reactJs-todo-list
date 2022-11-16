@@ -1,1 +1,1 @@
-export type { IPaginationHook } from './pagination.hook.interface';
+export type { IPaginationHook } from './pagination-hook.interface';

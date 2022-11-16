@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import reducerRegistry from './modules/common/services/reducerRegistry';
+import reducerRegistry from './modules/common/services/reducerRegistry.service';
 
 
 const preserveStateNonLoadedReducers = (_reducers: any) => {

@@ -1,1 +1,1 @@
-export { default as ErrorBoundary } from './error-boundery';
+export { default as ErrorBoundary } from './error-boundery.container';

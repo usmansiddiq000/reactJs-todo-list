@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Pagination } from '../../common/components';
 import { PageSize } from '../constants';
 import { ITodo } from '../interfaces';
-import TodoItem from './todo-item';
+import TodoItem from './todo-item.component';
 
 const ListTodo = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -13,9 +13,9 @@ const ListTodo = () => {
         const firstPageIndex = (currentPage - 1) * PageSize;
         const lastPageIndex = firstPageIndex + PageSize;
         return todolist.slice(firstPageIndex, lastPageIndex);
-      }, [currentPage, todolist?.length]);
+      }, [currentPage, todolist]);
 
-      const list = currentList.map((todo: ITodo, index: number)=> {
+    const list = currentList.map((todo: ITodo, index: number)=> {
         return <TodoItem key = { index } { ... todo } />
     })
 
