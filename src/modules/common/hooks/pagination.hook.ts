@@ -11,10 +11,9 @@ export const usePagination = ({
   currentPage,
 }: IPaginationHook) => {
   const paginationRange = useMemo(() => {
+    
     const totalPageCount = Math.ceil(totalCount / pageSize);
-
-    // Pages count is determined as siblingCount + firstPage + lastPage + currentPage + 2*DOTS
-    const totalPageNumbers = siblingCount + 1;
+    const totalPageNumbers = siblingCount + 5;
 
     /*
       If the number of pages is less than the page numbers we want to show in our
@@ -42,14 +41,14 @@ export const usePagination = ({
     const lastPageIndex = totalPageCount;
 
     if (!shouldShowLeftDots && shouldShowRightDots) {
-      let leftItemCount = 1 + 1 * siblingCount;
+      let leftItemCount = 3 + 2 * siblingCount;
       let leftRange = utils.range(1, leftItemCount);
 
       return [...leftRange, DOTS, totalPageCount];
     }
 
     if (shouldShowLeftDots && !shouldShowRightDots) {
-      let rightItemCount = 1 + 1 * siblingCount;
+      let rightItemCount = 3 + 2 * siblingCount;
       let rightRange = utils.range(
         totalPageCount - rightItemCount + 1,
         totalPageCount

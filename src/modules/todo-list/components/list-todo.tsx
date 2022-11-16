@@ -13,9 +13,8 @@ const ListTodo = () => {
         const firstPageIndex = (currentPage - 1) * PageSize;
         const lastPageIndex = firstPageIndex + PageSize;
         return todolist.slice(firstPageIndex, lastPageIndex);
-      }, [currentPage]);
+      }, [currentPage, todolist?.length]);
 
-      console.log(currentList)
       const list = currentList.map((todo: ITodo, index: number)=> {
         return <TodoItem key = { index } { ... todo } />
     })
