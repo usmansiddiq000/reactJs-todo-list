@@ -11,7 +11,7 @@
 - Run command **npm start** to start the server
 
 ### **App Directory Structure**
-For modular code structure the logic is divided into these directories and files.
+For modular code structure the logic is divided into these directories and files. 
 ```
 ├───pages
 ├───containers
